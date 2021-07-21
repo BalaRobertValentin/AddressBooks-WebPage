@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+        <ul class="menu-bar">
+            <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "Nolinks" })</li>
+            <li>@Html.ActionLink("About", "About", "Home", null, new { @class = "Nolinks" })</li>
+            <li>@Html.ActionLink("Register your Address", "", "AddressBooks", null, new { @class = "Nolinks" })</li>
+        </ul>
+        <li>@Html.Partial("_LoginPartial")</li>
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
